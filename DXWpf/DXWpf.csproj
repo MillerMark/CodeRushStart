@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AbsFunction.cs" />
+    <Compile Remove="CosineFunction.cs" />
+    <Compile Remove="ExpFunction.cs" />
+    <Compile Remove="FactorialFunction.cs" />
+    <Compile Remove="Function.cs" />
+    <Compile Remove="IFunction.cs" />
+    <Compile Remove="InvoiceDataBuilder.cs" />
+    <Compile Remove="InvoiceFactory.cs" />
+    <Compile Remove="Log10Function.cs" />
+    <Compile Remove="NegateFunction.cs" />
+    <Compile Remove="NumberFormat.cs" />
+    <Compile Remove="SineFunction.cs" />
+    <Compile Remove="SquareFunction.cs" />
+    <Compile Remove="SquareRootFunction.cs" />
+    <Compile Remove="TangentFunction.cs" />
+  </ItemGroup>
+
+</Project>
