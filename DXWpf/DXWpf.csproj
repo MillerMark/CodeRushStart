@@ -2,10 +2,19 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SecurityFlaws\BigMethodDemo.cs" />
+    <Compile Remove="SecurityFlaws\DemoSecurityFlaws.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="SecurityFlaws\DemoSecurityFlaws.cs" />
+  </ItemGroup>
 
 </Project>
