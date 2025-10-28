@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 namespace DXWpf.SecurityFlaws {
     /// <summary>
     /// This class intentionally demonstrates common security flaws for analysis purposes.
-    /// DO NOT USE THIS CODE IN PRODUCTION.
+    /// DO NOT USE THIS CODE IN PRODUCTION. 
     /// </summary>
     public class DemoSecurityFlaws {
         public const string MySuperSecurePassword = "P@ssw0rd123";

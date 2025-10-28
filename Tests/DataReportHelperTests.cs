@@ -1,9 +1,9 @@
 ﻿#nullable enable
 using NUnit.Framework;
+using DXWpf.BigMethod;
 using System;
 using System.IO;
 using System.Collections.Generic;
-using DXWpf.BigMethod;
 
 [TestFixture]
 public class DataReportHelperTests {
@@ -34,14 +34,14 @@ public class DataReportHelperTests {
 
             var output = ReadFile(outputFile);
 
-            StringAssert.Contains("Alice,50,Alpha", output);
-            StringAssert.DoesNotContain("Bob,30,Beta", output);
-            StringAssert.Contains("Charlie,70,Alpha", output);
-            StringAssert.Contains("Alpha: 2", output);
-            StringAssert.Contains("Beta: 1", output);
-            StringAssert.Contains("Total Records: 3", output);
-            StringAssert.Contains("Above Threshold: 2", output);
-            StringAssert.Contains("Below Threshold: 1", output);
+            Assert.That(output, Does.Contain("Alice,50,Alpha"));
+            Assert.That(output, Does.Not.Contain("Bob,30,Beta"));
+            Assert.That(output, Does.Contain("Charlie,70,Alpha"));
+            Assert.That(output, Does.Contain("Alpha: 2"));
+            Assert.That(output, Does.Contain("Beta: 1"));
+            Assert.That(output, Does.Contain("Total Records: 3"));
+            Assert.That(output, Does.Contain("Above Threshold: 2"));
+            Assert.That(output, Does.Contain("Below Threshold: 1"));
         }
         finally {
             File.Delete(inputFile);
@@ -65,7 +65,7 @@ public class DataReportHelperTests {
 
             var output = ReadFile(outputFile);
 
-            StringAssert.Contains("Summary:", output);
+            Assert.That(output, Does.Contain("Summary:"));
             Assert.That(
                 output.Contains("Majority of records are above the threshold.") ||
                 output.Contains("Majority of records are below the threshold.") ||
@@ -95,10 +95,10 @@ public class DataReportHelperTests {
 
             var output = ReadFile(outputFile);
 
-            StringAssert.Contains("Errors:", output);
-            StringAssert.Contains("Malformed line: MalformedLine", output);
-            StringAssert.Contains("Invalid value for Bob: notanumber", output);
-            StringAssert.Contains("Empty line detected", output);
+            Assert.That(output, Does.Contain("Errors:"));
+            Assert.That(output, Does.Contain("Malformed line: MalformedLine"));
+            Assert.That(output, Does.Contain("Invalid value for Bob: notanumber"));
+            Assert.That(output, Does.Contain("Empty line detected"));
         }
         finally {
             File.Delete(inputFile);
