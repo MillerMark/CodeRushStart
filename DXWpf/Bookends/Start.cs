@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace DXWpf {
+namespace DXWpf.Bookends {
     internal class Start {
         //`+++ https://github.com/MillerMark/CodeRushStart
 
