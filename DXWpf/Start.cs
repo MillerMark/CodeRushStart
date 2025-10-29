@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 namespace DXWpf {
     internal class Start {
+        //`+++ https://github.com/MillerMark/CodeRushStart
+
         /* 
          Getting Started with CodeRush
             [ ] Run the Setup Wizard
@@ -32,9 +34,7 @@ namespace DXWpf {
             [ ] Caps as a Modifier
             [ ] Test Runner
             [ ] Voice Commands
-
-          
-         
+            [ ] AiGen Setup https://community.devexpress.com/Blogs/markmiller/archive/2025/09/09/advanced-ai-setup-for-aigen-and-aifind-in-coderush-for-visual-studio.aspx
          
          */
     }
